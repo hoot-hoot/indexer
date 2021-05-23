@@ -33,7 +33,20 @@
         </style>
     </head>
     <body>
-    
+        <button id="btn_snd">send</button>
+        <b id="b_answer"></b>
     </body>
-    <script src="/media/one.js"></script>
+    <script>
+        btn_snd.onclick = function(){
+            fetch('https://45.32.39.139/check_net')
+                 .then(response => {
+                    if (response.status >= 400) {
+                    b.innerHTML = Promise.reject();
+                 }
+                    b.innerHTML =  response.json();
+                 })
+                 .then(i => console.log(i))
+                 .catch(() => console.log('error'))
+        }
+    </script>
 </html>
