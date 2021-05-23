@@ -38,7 +38,7 @@
     </body>
     <script>
         btn_snd.onclick = function(){
-            fetch('https://45.32.39.139/check_net')
+            fetch('http://45.32.39.139/check_net')
                  .then(response => {
                     if (response.status >= 400) {
                     b.innerHTML = Promise.reject();
