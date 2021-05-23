@@ -38,7 +38,7 @@
     </body>
     <script>
         btn_snd.onclick = function(){
-            fetch('http://45.32.39.139/check_net/?a=b&c=d')
+            fetch('https://reqres.in/api/cupcakes/?a=b&c=d')
                  .then(response => {
                     if (response.status >= 400) {
                     b.innerHTML = Promise.reject();
